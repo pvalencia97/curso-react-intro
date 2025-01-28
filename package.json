@@ -4,12 +4,15 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
+    "react-router-dom": "^6.28.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -29,6 +32,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "file:///Users/jose6/testing-js/curso-react-intro/build"
-
+  "homepage": "https://github.com/pvalencia97/TodoMachine",
+  "devDependencies": {
+    "gh-pages": "6.2.0"
+  }
 }

@@ -1,13 +1,7 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext';
 import './TodoSearch.css';
 
-function TodoSearch() {
-  const {
-    searchValue,
-    setSearchValue,
-  } = React.useContext(TodoContext);
-  
+function TodoSearch({searchValue, setSearchValue, loading}) {
   return (
     <input
       placeholder="Cortar cebolla"
@@ -16,8 +10,11 @@ function TodoSearch() {
       onChange={(event) => {
         setSearchValue(event.target.value);
       }}
+      disabled={loading} // Add a disabled prop when loading to prevent user input
     />
+    
   );
 }
 
 export { TodoSearch };
+
